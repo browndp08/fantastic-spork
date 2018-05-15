@@ -1,3 +1,5 @@
+var programData = require("../program");
+
 var gradeBook = {
 
     _grades: [],
@@ -14,6 +16,12 @@ var gradeBook = {
             total += this._grades[i];
         };
         return total / this._grades.length;
+    },
+    printAverage: function(){
+        for(var i = 2; i < process.argv.length; i++){
+            this.addGrade(parseInt(process.argv[i]));
+        };
+        console.log('Average: ' + this.getAverage());
     },
     reset: function(){
         this._grades = [];
