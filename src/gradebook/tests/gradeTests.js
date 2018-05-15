@@ -24,4 +24,3 @@ exports["Can averages grades"] = function(test){
     test.done();
 };
 
-
